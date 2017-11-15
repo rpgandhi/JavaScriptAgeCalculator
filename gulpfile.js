@@ -8,6 +8,7 @@ var del = require('del');
 var buildProduction = utilities.env.production;
 var jshint = require('gulp-jshint');
 var browserSync = require('browser-sync').create();
+var babelify = require("babelify");
 var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
@@ -69,11 +70,13 @@ gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
 });
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
-  return browserify({ entries: ['./tmp/allConcat.js'] })
+  return browserify({ entries: ['./tmp/allConcat.js']})
+    .transform(babelify.configure({
+      presets: ["es2015"]
+    }))
     .bundle()
     .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'));
-});
+    .pipe(gulp.dest('./build/js'))
 
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*.js'])
