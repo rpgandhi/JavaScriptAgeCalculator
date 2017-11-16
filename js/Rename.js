@@ -1,3 +1,5 @@
-$(document).ready(function(){
-
-});
+export class Rename {
+  consructor() {
+    
+  }
+}
