@@ -76,7 +76,8 @@ gulp.task('jsBrowserify', ['concatInterface'], function() {
     }))
     .bundle()
     .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build/js'));
+});
 
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*-interface.js'])

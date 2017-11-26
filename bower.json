@@ -1,15 +1,16 @@
 {
-  "name": "template",
-  "description": "it's a template",
+  "name": "age calculator",
+  "description": "calculates different types of ages",
   "main": "index.html",
   "authors": [
-    "Adam Titus"
+    "Rakhee Gandhi"
   ],
-  "license": "MIT",
+  "license": "ISC",
   "keywords": [
-    "template"
+    "age",
+    "calculator"
   ],
-  "homepage": "https://github.com/TheBigTaco/Javascript-Template",
+  "homepage": "https://github.com/rpgandhi/JavaScriptAgeCalculator.git",
   "ignore": [
     "**/.*",
     "node_modules",

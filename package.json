@@ -1,7 +1,7 @@
 {
-  "name": "memory",
+  "name": "Age Calculator",
   "version": "1.0.0",
-  "description": "A memory game",
+  "description": "Calculates different types of ages",
   "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js"
@@ -32,5 +32,9 @@
     "karma-jquery": "^0.2.2",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2"
   }
 }
