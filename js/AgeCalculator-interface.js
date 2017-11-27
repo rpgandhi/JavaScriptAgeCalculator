@@ -5,9 +5,11 @@ $(document).ready(function(){
   event.preventDefault();
   alert("Line6");
 
-  let ageInput = parseInt($("#age").val());
+  // let ageInput = parseInt($("#age").val());
+  let ageInput = $("input#age").val();
 
   $("#output").text(ageInput);
+
 alert("line 9");
   ageInput.marsYears();
   alert("line 11");
