@@ -1,5 +1,5 @@
 {
-  "name": "Age Calculator",
+  "name": "AgeCalculator",
   "version": "1.0.0",
   "description": "Calculates different types of ages",
   "main": "index.js",
