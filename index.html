@@ -4,11 +4,7 @@
     <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <!-- <link href="css/styles.css" rel="stylesheet" type="text/css"> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/AgeCalculator.js"></script>
-    <script type="text/javascript" src="js/AgeCalculator-interface.js"></script> -->
+
     <title>Galactic Age Calculator</title>
   </head>
   <body>
@@ -34,41 +30,49 @@
           <label for="inputtedDOB">Enter your date of birth. If you are unsure of the time, just guess!</label>
           <input id="inputtedDOB" type="datetime-local">
 
-          <label for="gender">Choose which one best describes your gender:</label>
-          <select id="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-
-          <label for="sleep">Choose which one best describes your sleep habits:</label>
-          <select id="sleep">
-            <option value="lessSleep">Less than 7 hours per night</option>
-            <option value="moreSleep">7 or more hours per night</option>
-          </select>
-
-          <label for="eat">Choose which one best describes your dietary habits:</label>
-          <select id="eat">
-            <option value="healthy">Eats fruits and/or vegetables most day of the week</option>
-            <option value="unhealthy">Does not eat fruits and/or vegetables very often</option>
-          </select>
-
-          <label for="exercise">Choose which one best describes your exercise habits:</label>
-          <select id="exercise">
-            <option value="active">Exercise at least 3 days per week</option>
-            <option value="sedentary">Mostly sedentary</option>
-          </select>
 
           <button type="submit">Submit</button>
         </form>
 
         <p id="accurateSeconds">Your current age in seconds is: </p>
         <p id="accurateYears">Your accurate age in years is: </p>
-        <p id="mercury-expect"></p>
-        <p id="venus-expect"></p>
-        <p id="jupiter-expect"></p>
-        <p id="mars-expect"></p>
+        <p id="earthLifeExpect">Average life expectancy on Earth is: </p>
+        <p id="earthLeft">Years you have left on Earth: </p>
+        <p id="mercuryLifeExpect">Your life expectancy on Mercury is: </p>
+        <p id="mercuryLeft">Years you have left on Mercury: </p>
+        <p id="venusLifeExpect">Your life expectancy on Venus is: </p>
+        <p id="venusLeft">Years you have left on Venus: </p>
+        <p id="jupiterLifeExpect">Your life expectancy on Jupiter is: </p>
+        <p id="jupiterLeft">Years you have left on Jupiter: </p>
+        <p id="marsLifeExpect">Your life expectancy on Mars is: </p>
+        <p id="marsLeft">Years you would have left on Mars: </p>
     </div>
 
 
   </body>
 </html>
+
+
+<!-- <label for="gender">Choose which one best describes your gender:</label>
+<select id="gender">
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+</select>
+
+<label for="sleep">Choose which one best describes your sleep habits:</label>
+<select id="sleep">
+  <option value="lessSleep">Less than 7 hours per night</option>
+  <option value="moreSleep">7 or more hours per night</option>
+</select>
+
+<label for="eat">Choose which one best describes your dietary habits:</label>
+<select id="eat">
+  <option value="healthy">Eats fruits and/or vegetables most day of the week</option>
+  <option value="unhealthy">Does not eat fruits and/or vegetables very often</option>
+</select>
+
+<label for="exercise">Choose which one best describes your exercise habits:</label>
+<select id="exercise">
+  <option value="active">Exercise at least 3 days per week</option>
+  <option value="sedentary">Mostly sedentary</option>
+</select> -->

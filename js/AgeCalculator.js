@@ -11,79 +11,31 @@ export class Age {
 }
 
 export class DOB {
-  constructor(accurateAgeInRegSeconds){
-    this.secondsDiff = accurateAgeInRegSeconds;
-    // this.accurateSeconds = this.secondsDiff / 1000;
-    this.accurateAge = this.secondsDiff * 365 * 24 * 60 * 60;
-  }
-
-  accurateSeconds(){
-    this.dob.getTime();
-
-
-  }
-
-  lifeExpectancy(){
-
-
+  constructor(accurateAge){
+    this.accurateYears = accurateAge;
+    this.mercuryAge = (this.accurateYears / 0.24).toFixed(2);
+    this.venusAge = (this.accurateYears / 0.62).toFixed(2);
+    this.marsAge = (this.accurateYears / 1.88).toFixed(2);
+    this.jupiterAge = (this.accurateYears / 11.86).toFixed(2);
+    this.lifeExpect = 85;
+    this.marsLifeExpect = (this.lifeExpect / 1.88).toFixed(2);
+    this.mercuryLifeExpect = (this.lifeExpect / 0.24).toFixed(2);
+    this.venusLifeExpect = (this.lifeExpect / 0.62).toFixed(2);
+    this.jupiterLifeExpect = (this.lifeExpect / 11.86).toFixed(2);
+    this.earthLeft = (this.lifeExpect - this.accurateYears).toFixed(2);
+    this.marsLeft = (this.marsLifeExpect - this.marsAge).toFixed(2);
+    this.mercuryLeft = (this.mercuryLifeExpect - this.mercuryAge).toFixed(2);
+    this.venusLeft = (this.venusLifeExpect - this.venusAge).toFixed(2);
+    this.jupiterLeft = (this.jupiterLifeExpect - this.jupiterAge).toFixed(2);
   }
 }
-//
-//   doodle(input) {
-//     let whatever = input * 10;
-//     return whatever;
-//   }
-//
-//
-//
-//
-//
-// ageInSeconds() {
-//   this.age * 365 * 24 * 60 * 60;
-//   return this.age;
-// }
-//
-// feed() {
-//   this.age + 10;
-//   return this.age;
-// }
-// constructor() {
-//   this.age = 0;
-//   this.mars = 0;
-//   this.venus = 0;
-//   this.mercury = 0;
-//   this.jupiter = 0;
-//   this.lifeExpectancy = 85;
-// }
-// secondConverter(theInputtedThing) {
-//   const today = new Date();
-//   let input = new Date(theInputtedThing);
-//   let todaysSeconds = today.getTime();
-//   let datesSeconds = input.getTime();
-//   let totalSeconds = (todaysSeconds - datesSeconds)/1000;
-//   return (totalSeconds);
-// }
-// ageChecker(date) {
-//   const seconds = this.secondConverter(date);
-//   const years = seconds / 3.154e+7;
-//   this.age = Math.floor(years);
-//   return(years);
-// }
-// mercuryConverter(date) {
-//   const mercury = this.ageChecker(date)/0.24;
-//   this.mercury = Math.floor(mercury);
-// }
-// venusConverter(date) {
-//   const venus = this.ageChecker(date)/0.62;
-//   this.venus = Math.floor(venus);
-// }
-// marsConverter(date) {
-//   const mars = this.ageChecker(date)/1.88;
-//   this.mars = Math.floor(mars);
-// }
-// jupiterConverter(date) {
-//   const jupiter = this.ageChecker(date)/11.86;
-//   this.jupiter = Math.floor(jupiter);
-// }
-//
-//
+//lifeExpectancy method currently not working. Maybe a syntax issue?
+  // lifeExpectancy(){
+  //   if (gender == "male") {
+  //     (this.lifeExpect - 10);
+  //   }
+  //   if (sleep == "lessSleep"){
+  //     (this.lifeExpect - 10);
+  //   }
+  //   return this.lifeExpect
+  // }
