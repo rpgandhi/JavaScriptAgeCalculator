@@ -7,16 +7,17 @@ Object.defineProperty(exports, "__esModule", {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Age = exports.Age = function Age(input) {
-  _classCallCheck(this, Age);
-
-  this.age = input;
-  this.ageInSeconds = this.age * 365 * 24 * 60 * 60;
-  this.mercuryYears = (this.age / 0.24).toFixed(2);
-  this.venusYears = (this.age / 0.62).toFixed(2);
-  this.marsYears = (this.age / 1.88).toFixed(2);
-  this.jupiterYears = (this.age / 11.86).toFixed(2);
-};
+// export class Age {
+//   constructor(input) {
+//     this.age = input;
+//     this.ageInSeconds = this.age * 365 * 24 * 60 * 60;
+//     this.mercuryYears = (this.age / 0.24).toFixed(2);
+//     this.venusYears = (this.age / 0.62).toFixed(2);
+//     this.marsYears = (this.age / 1.88).toFixed(2);
+//     this.jupiterYears = (this.age / 11.86).toFixed(2);
+//
+//   }
+// }
 
 var DOB = exports.DOB = function DOB(accurateAge) {
   _classCallCheck(this, DOB);
@@ -36,17 +37,20 @@ var DOB = exports.DOB = function DOB(accurateAge) {
   this.mercuryLeft = (this.mercuryLifeExpect - this.mercuryAge).toFixed(2);
   this.venusLeft = (this.venusLifeExpect - this.venusAge).toFixed(2);
   this.jupiterLeft = (this.jupiterLifeExpect - this.jupiterAge).toFixed(2);
-};
-//lifeExpectancy method currently not working. Maybe a syntax issue?
-// lifeExpectancy(){
-//   if (gender == "male") {
+}
+// lifeExpectancy method currently not working. Maybe a syntax issue?
+// lifeExpectancy(gender, sleep){
+//   if (gender === "male") {
 //     (this.lifeExpect - 10);
 //   }
-//   if (sleep == "lessSleep"){
+//   if (sleep === "lessSleep"){
 //     (this.lifeExpect - 10);
 //   }
-//   return this.lifeExpect
+//   return this.lifeExpect;
 // }
+
+
+;
 
 },{}],2:[function(require,module,exports){
 "use strict";
@@ -54,19 +58,20 @@ var DOB = exports.DOB = function DOB(accurateAge) {
 var _AgeCalculator = require("./../js/AgeCalculator.js");
 
 $(document).ready(function () {
-  $("#ageForm").submit(function (event) {
+  //   $("#ageForm").submit(function(event){
+  //
+  //   event.preventDefault();
+  //
+  // let input  = parseInt($("#age").val());
+  // let newAge = new Age(input);
+  //
+  // $("#outputVenus").append(`${newAge.venusYears}`);
+  // $("#outputSeconds").append(`${newAge.ageInSeconds}`);
+  // $("#outputMars").append(`${newAge.marsYears}`);
+  // $("#outputMercury").append(`${newAge.mercuryYears}`);
+  // $("#outputJupiter").append(`${newAge.jupiterYears}`);
+  // });
 
-    event.preventDefault();
-
-    var input = parseInt($("#age").val());
-    var newAge = new _AgeCalculator.Age(input);
-
-    $("#outputVenus").append("" + newAge.venusYears);
-    $("#outputSeconds").append("" + newAge.ageInSeconds);
-    $("#outputMars").append("" + newAge.marsYears);
-    $("#outputMercury").append("" + newAge.mercuryYears);
-    $("#outputJupiter").append("" + newAge.jupiterYears);
-  });
 
   $("#moreDetailsForm").submit(function (event) {
 
@@ -83,7 +88,7 @@ $(document).ready(function () {
     var accurateAge = (secondBetweenDates / 31536000).toFixed(2);
 
     var newDOB = new _AgeCalculator.DOB(accurateAge);
-    // console.log(newDOB.lifeExpectancy());
+    // console.log(newDOB.lifeExpectancy(gender, sleep));
 
     $("#accurateSeconds").append(secondBetweenDates);
     $("#accurateYears").append("" + newDOB.accurateYears);
@@ -98,9 +103,9 @@ $(document).ready(function () {
     $("#venusLeft").append("" + newDOB.venusLeft);
     $("#jupiterLeft").append("" + newDOB.jupiterLeft);
 
-    console.log("" + newDOB.lifeExpect);
-    console.log("" + newDOB.earthLeft);
-    console.log("" + newDOB.marsLeft);
+    // console.log(`${newDOB.lifeExpect}`);
+    // console.log(`${newDOB.earthLeft}`);
+    // console.log(`${newDOB.marsLeft}`);
   });
 });
 

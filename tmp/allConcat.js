@@ -1,19 +1,19 @@
-import {Age, DOB} from './../js/AgeCalculator.js';
+import {DOB} from './../js/AgeCalculator.js';
 
 $(document).ready(function(){
-  $("#ageForm").submit(function(event){
-
-  event.preventDefault();
-
-let input  = parseInt($("#age").val());
-let newAge = new Age(input);
-
-$("#outputVenus").append(`${newAge.venusYears}`);
-$("#outputSeconds").append(`${newAge.ageInSeconds}`);
-$("#outputMars").append(`${newAge.marsYears}`);
-$("#outputMercury").append(`${newAge.mercuryYears}`);
-$("#outputJupiter").append(`${newAge.jupiterYears}`);
-});
+//   $("#ageForm").submit(function(event){
+//
+//   event.preventDefault();
+//
+// let input  = parseInt($("#age").val());
+// let newAge = new Age(input);
+//
+// $("#outputVenus").append(`${newAge.venusYears}`);
+// $("#outputSeconds").append(`${newAge.ageInSeconds}`);
+// $("#outputMars").append(`${newAge.marsYears}`);
+// $("#outputMercury").append(`${newAge.mercuryYears}`);
+// $("#outputJupiter").append(`${newAge.jupiterYears}`);
+// });
 
 
 $("#moreDetailsForm").submit(function(event){
@@ -31,7 +31,7 @@ let secondBetweenDates = Math.abs((new Date().getTime() - accurateAgeInMSeconds)
 let accurateAge = (secondBetweenDates/31536000).toFixed(2);
 
 let newDOB = new DOB(accurateAge);
-// console.log(newDOB.lifeExpectancy());
+// console.log(newDOB.lifeExpectancy(gender, sleep));
 
 $("#accurateSeconds").append(secondBetweenDates);
 $("#accurateYears").append(`${newDOB.accurateYears}`);
@@ -46,9 +46,9 @@ $("#mercuryLeft").append(`${newDOB.mercuryLeft}`);
 $("#venusLeft").append(`${newDOB.venusLeft}`);
 $("#jupiterLeft").append(`${newDOB.jupiterLeft}`);
 
-console.log(`${newDOB.lifeExpect}`);
-console.log(`${newDOB.earthLeft}`);
-console.log(`${newDOB.marsLeft}`);
+// console.log(`${newDOB.lifeExpect}`);
+// console.log(`${newDOB.earthLeft}`);
+// console.log(`${newDOB.marsLeft}`);
 
 });
 
