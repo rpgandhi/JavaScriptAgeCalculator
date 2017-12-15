@@ -1,21 +1,6 @@
 import {DOB} from './../js/AgeCalculator.js';
 
 $(document).ready(function(){
-//   $("#ageForm").submit(function(event){
-//
-//   event.preventDefault();
-//
-// let input  = parseInt($("#age").val());
-// let newAge = new Age(input);
-//
-// $("#outputVenus").append(`${newAge.venusYears}`);
-// $("#outputSeconds").append(`${newAge.ageInSeconds}`);
-// $("#outputMars").append(`${newAge.marsYears}`);
-// $("#outputMercury").append(`${newAge.mercuryYears}`);
-// $("#outputJupiter").append(`${newAge.jupiterYears}`);
-// });
-
-
 $("#moreDetailsForm").submit(function(event){
 
 event.preventDefault();
